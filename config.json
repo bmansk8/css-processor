@@ -1,0 +1,47 @@
+{
+    "file_types":["scss","json","css","less"],
+    "filename": "UtilClasses",
+    "properties": [
+        "margin",
+        "padding"
+    ],
+    "options": [
+        "",
+        "-left",
+        "-right",
+        "-bottom",
+        "-top",
+        "-x",
+        "-y"
+    ],
+    "spacers": {
+        "XXS": {
+            "default": "3px",
+            "768px": "4px"
+        },
+        "XS": {
+            "default": "6px",
+            "768px": "8px"
+        },
+        "S": {
+            "default": "8px",
+            "768px": "12px"
+        },
+        "M": {
+            "default": "14px",
+            "768px": "20px"
+        },
+        "L": {
+            "default": "22px",
+            "768px": "32px"
+        },
+        "XL": {
+            "default": "36px",
+            "768px": "52px"
+        },
+        "XXL": {
+            "default": "59px",
+            "768px": "84px"
+        }
+    }
+}
