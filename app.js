@@ -5,12 +5,11 @@ import {
   CssClassCreatorFactory,
 } from "./factories/index.js";
 
-/**
- * @description A class used to create CSS files that have spacing/spacer utility classes
- * simply call the .main method to use this class
- */
+
 class CustomClassCreator {
   /**
+   * @description A class used to create CSS files that have spacing/spacer utility classes
+   * simply call the .main method to use this class
    * @param {Object} config json/object config used to set all params of the class. Such as filetype, spacers, options ect...
    * @param {string[]} config.file_types file types
    * @param {string } config.filename file name
