@@ -1,6 +1,5 @@
 import { JsonConfigValidator } from "../validators/JsonConfigValidator.js";
-import { CssClassCreator, JsonClassCreator } from "../classes/index.js";
-import { ScssClassCreator } from "../classes/ScssClassCreator.js";
+import { CssClassCreator, JsonClassCreator, ScssClassCreator } from "../classes/index.js";
 
 /**
  * Factory function that creates a new instance of `JsonConfigValidator` with the provided configuration.
