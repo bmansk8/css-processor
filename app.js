@@ -3,7 +3,7 @@ import config from "./config.json" assert { type: "json" };
 import {
   ConfigValidatorFactory,
   CssClassCreatorFactory,
-} from "./facotries/index.js";
+} from "./factories/index.js";
 
 /**
  * @param {string} fileName fileName must be a string, and will overwrite any existing files with the same name using the .css  file extension
