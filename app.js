@@ -6,11 +6,18 @@ import {
 } from "./factories/index.js";
 
 /**
- * @param {string} fileName fileName must be a string, and will overwrite any existing files with the same name using the .css  file extension
  * @description A class used to create CSS files that have spacing/spacer utility classes
  * simply call the .main method to use this class
  */
 class CustomClassCreator {
+  /**
+   * @param {Object} config json/object config used to set all params of the class. Such as filetype, spacers, options ect...
+   * @param {string[]} config.file_types file types
+   * @param {string } config.filename file name
+   * @param {string[]} config.properties what css properties to make
+   * @param {string[]} config.options include options like -left or -right
+   * @param { {string : { string : string } } } config.spacers a object defining your spacers
+   */
   constructor(config) {
     this.config = config;
 
