@@ -1,5 +1,10 @@
 import { JsonConfigValidator } from "../validators/JsonConfigValidator.js";
-import { CssClassCreator, JsonClassCreator, ScssClassCreator } from "../classes/index.js";
+import {
+  CssClassCreator,
+  JsonClassCreator,
+  ScssClassCreator,
+  SassClassCreator,
+} from "../classes/index.js";
 
 /**
  * Factory function that creates a new instance of `JsonConfigValidator` with the provided configuration.
@@ -13,7 +18,7 @@ function ConfigValidatorFactory(config) {
 
 /**
  * @param {{spacers: {},options: string[],cssProperties: string[]}} config - The configuration object to be validated.
- * @param {'css' | 'json' | 'scss' | 'less'} fileType - what kind of file we are trying to make. Json, or CSS file for example
+ * @param {'css' | 'json' | 'scss' | 'less' | 'sass'} fileType - what kind of file we are trying to make. Json, or CSS file for example
  * @returns {Class} An instance of a class that has a createClasses method.
  */
 function CssClassCreatorFactory(config, fileType) {
@@ -49,6 +54,12 @@ function createFactoryMapperObject(config) {
       ),
     less: () =>
       new ScssClassCreator(
+        config.spacers,
+        config.options,
+        config.cssProperties
+      ),
+    sass: () =>
+      new SassClassCreator(
         config.spacers,
         config.options,
         config.cssProperties

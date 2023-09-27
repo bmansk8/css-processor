@@ -1,5 +1,11 @@
 {
-    "file_types":["scss","json","css","less"],
+    "file_types": [
+        "sass",
+        "less",
+        "scss",
+        "css",
+        "json"
+    ],
     "filename": "UtilClasses",
     "properties": [
         "margin",

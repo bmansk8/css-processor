@@ -1,4 +1,4 @@
-const cssShorthand = { margin: "m", padding: "p" };
+import { cssShorthand } from "../constants/index.js";
 
 class CssClassCreator {
   /**

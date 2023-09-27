@@ -5,7 +5,6 @@ import {
   CssClassCreatorFactory,
 } from "./factories/index.js";
 
-
 class CustomClassCreator {
   /**
    * @description A class used to create CSS files that have spacing/spacer utility classes
@@ -57,7 +56,7 @@ class CustomClassCreator {
   }
 
   /**
-   * @param {'json' | 'css' | 'scss'} file_type - type of file to create.
+   * @param {'json' | 'css' | 'scss'| 'less' | 'sass'} file_type - type of file to create.
    * @description This method creates a css file with css classes based on the config json file.
    * It can create classes for margin and or padding, at multiple breakpoints.
    */

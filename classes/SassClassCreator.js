@@ -1,6 +1,6 @@
 import { cssShorthand } from "../constants/index.js";
 
-class ScssClassCreator {
+class SassClassCreator {
   /**
    * @param {{}} spacers
    * @param {String[]} options
@@ -41,14 +41,14 @@ class ScssClassCreator {
         }
       });
 
-      this.cssString += "}\n";
+      this.cssString += "\n";
     });
 
     return this.cssString;
   }
 
   createCssStringWithBreakpoint(option, cssAttribute, key, breakpointKey) {
-    let mediaQueryString = `\n\t@media(min-width: ${breakpointKey}) {`;
+    let mediaQueryString = `\n\t@media(min-width: ${breakpointKey}) `;
 
     const classValue = this.createCssClassValue(
       cssAttribute,
@@ -58,7 +58,7 @@ class ScssClassCreator {
 
     mediaQueryString += `\n\t${classValue}`;
 
-    mediaQueryString += "\n\t}\n";
+    mediaQueryString += "\n\t\n";
 
     return mediaQueryString;
   }
@@ -80,7 +80,7 @@ class ScssClassCreator {
 
     cssString += `\n.${
       cssAttributeShorthand + option + "-" + key
-    } {\n${classValue}\n`;
+    } \n${classValue}\n`;
 
     return cssString;
   }
@@ -93,13 +93,13 @@ class ScssClassCreator {
    */
   createCssClassValue(cssAttribute, option, value) {
     if (option === "-x") {
-      return `\t${cssAttribute}-left: ${value}; ${cssAttribute}-right: ${value};`;
+      return `\t${cssAttribute}-left: ${value} ${cssAttribute}-right: ${value}`;
     } else if (option === "-y") {
-      return `\t${cssAttribute}-bottom: ${value}; ${cssAttribute}-top: ${value};`;
+      return `\t${cssAttribute}-bottom: ${value} ${cssAttribute}-top: ${value}`;
     } else {
-      return `\t${cssAttribute + option}: ${value};`;
+      return `\t${cssAttribute + option}: ${value}`;
     }
   }
 }
 
-export { ScssClassCreator };
+export { SassClassCreator };
